@@ -1,4 +1,4 @@
-package com.holovin.cluster.data.service
+package com.holovin.data.service.mongo
 
 import org.springframework.data.mongodb.core.mapping.Document
 
