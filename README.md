@@ -1,28 +1,18 @@
-# Бакалаврська робота
+# Application of Microservice Architecture for Automation of the Process of Checking Student Programming Works
 
-Застосування мікросервісної архітектури для автоматизації процесу перевірки студентських робіт з програмування.
+## Overview
 
-Автор: Головін Богдан Олександрович. КПІ ім. Ігоря Сікорського, ІПСА, кафедра системного проектування, 2022 рік.
+The objective of this research is to automate the process of checking student programming works by developing a web application based on microservice architecture. The focus of the study includes the methods and technologies involved in the verification of student programming assignments.
 
-## Матеріали захисту
+## Research Methods
 
-- Дипломна робота: [DOCX](docs/thesis/Holovin_2022b.docx), [PDF](docs/thesis/Holovin_2022b.pdf).
-- Презентація: [PPTX](docs/presentation/Holovin_2022b.pptx), [PDF](docs/presentation/Holovin_2022b_pptx.pdf).
-- [Завдання на дипломну роботу](docs/defense/Завдання_Головін_Б.О._ДА-81.docx).
-- [Діаграма подання роботи та перевірки запозичень](docs/architecture/student-submission-and-plagiarism.puml).
+The study employs the following methods:
 
-## Код
+- **Technology Utilization:** Using technologies that support microservice development and communication.
+- **Architecture Overview:** Conducting an overview of monolithic and microservice architectures.
+- **Program Analysis:** Studying existing programs that address similar problems.
 
-| Каталог | Призначення |
-| --- | --- |
-| `gateway` | Вебінтерфейс і маршрутизація запитів |
-| `userService` | Користувачі, лабораторні роботи та права доступу |
-| `dataService` | Зберігання файлів робіт і шаблонів |
-| `plagiarismService` | Перевірка запозичень |
-| `testService` | Компіляція та тестування студентських програм |
-| `env` | Конфігурація Docker Compose |
-| `test-data` | Приклади студентських робіт, робіт викладача та шаблону |
+## Development and Evaluation
 
-Технології: Kotlin, Spring Boot, Gradle, MongoDB.
-
-Код збережено зі старими залежностями та локальними шляхами. Збірку й запуск під час упорядкування не перевіряли.
+- **Web Application Development:** A web application for thesis work has been developed.
+- **Software Evaluation:** The developed software product has been evaluated to assess its effectiveness and functionality.
