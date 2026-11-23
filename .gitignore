@@ -1,0 +1,33 @@
+# IDE
+.idea/
+**/.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+
+# Build outputs and caches
+.gradle/
+**/.gradle/
+**/build/
+**/target/
+**/out/
+*.class
+__pycache__/
+*.pyc
+
+# Local data and runtime files
+env/mongo-data/
+**/xFiles/
+*.log
+.env
+.env.*
+!.env.example
+forDiplom
+forDiplom.pub
+
+# Office temporary files and OS metadata
+~$*
+**/~$*
+.DS_Store
+Thumbs.db
