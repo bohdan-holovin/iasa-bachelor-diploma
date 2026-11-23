@@ -64,7 +64,7 @@
     </form>
 
     <hr>
-    <h3 text="Download template"></h3>
+    <p>Download template</p>
     <form class="document" method="post"
           th:action="@{/download_template/{email}/{subject}/{labNumber}(email = ${lab.getTeacherEmail()},subject = ${lab.getSubject()},labNumber = ${lab.getLabNumber()})}"
           th:object="${documentRequest}">

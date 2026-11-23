@@ -54,6 +54,25 @@ class Service(
         dataService.saveLab(multipartFile, labData.createNameLabFolder(), labData.createNameLab(studentData))
     }
 
+    fun addLabs(
+        teacherEmail: String,
+        subject: String,
+        labNumber: String,
+        multipartFile: MultipartFile
+    ) {
+
+        val teacherData = getTeacherFromDbByEmail(teacherEmail)
+
+        val labData = labDataRepository.findByTeacherEmailAndSubjectAndLabNumber(
+            teacherEmail,
+            subject,
+            labNumber
+        ).get()
+
+        // data service
+        dataService.saveLabs(multipartFile, labData.createNameLabFolder())
+    }
+
     fun addTemplate(
         teacherEmail: String,
         subject: String,

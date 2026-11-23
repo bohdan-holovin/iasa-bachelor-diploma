@@ -123,6 +123,14 @@ interface UserServiceClient {
         @RequestPart multipartFile: MultipartFile
     )
 
+    @PostMapping("/addLabsByTeacher", consumes = ["multipart/form-data"])
+    fun addLabsByTeacher(
+        @RequestParam teacherEmail: String,
+        @RequestParam subject: String,
+        @RequestParam labNumber: String,
+        @RequestPart multipartFile: MultipartFile
+    )
+
     @PostMapping("/addTemplateByTeacher", consumes = ["multipart/form-data"])
     fun addTemplateByTeacher(
         @RequestParam teacherEmail: String,

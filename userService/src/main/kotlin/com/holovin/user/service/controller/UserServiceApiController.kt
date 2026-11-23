@@ -93,7 +93,7 @@ class UserServiceApiController(
         subject: String,
         labNumber: String
     ) {
-        userService.updateStudentAccessByEmail(teacherEmail, group, subject, labNumber)
+        userService.updateStudentsAccessByGroup(teacherEmail, group, subject, labNumber)
     }
 
     override fun checkPlagByStudent(teacherEmail: String, studentEmail: String, subject: String, labNumber: String) {
@@ -116,6 +116,15 @@ class UserServiceApiController(
         multipartFile: MultipartFile
     ) {
         userService.addLab(teacherEmail, studentEmail, subject, labNumber, multipartFile)
+    }
+
+    override fun addLabsByTeacher(
+        teacherEmail: String,
+        subject: String,
+        labNumber: String,
+        multipartFile: MultipartFile
+    ) {
+        userService.addLabs(teacherEmail, subject, labNumber, multipartFile)
     }
 
     override fun addTemplateByTeacher(

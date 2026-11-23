@@ -189,6 +189,22 @@ class GwController(
 
     @ResponseBody
     @PostMapping(
+        "/upload_labs_by_teacher/{email}/{subject}/{labNumber}",
+        consumes = [MediaType.MULTIPART_FORM_DATA_VALUE]
+    )
+    fun uploadLabsByTeacher(
+        principal: Principal,
+        @RequestParam file: MultipartFile,
+        @PathVariable("email") teacherEmail: String,
+        @PathVariable("subject") subject: String,
+        @PathVariable("labNumber") labNumber: String,
+    ): RedirectView {
+        userServiceClient.addLabsByTeacher(teacherEmail, subject, labNumber, file)
+        return RedirectView("/get_lab_by_teacher/${teacherEmail}/${subject}/${labNumber}")
+    }
+
+    @ResponseBody
+    @PostMapping(
         "/upload_template/{email}/{subject}/{labNumber}",
         consumes = [MediaType.MULTIPART_FORM_DATA_VALUE]
     )
